@@ -1,0 +1,53 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[scale=2]{ccicons}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{3d}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Evolvability in EANN}
+\subtitle{Northwest Honors Research Symposium}
+\date{November 5th, 2016}
+\author{\texorpdfstring{Matthew Moreno$^{*}$\newline\url{mamoreno@pugetsound.edu}}{Matthew Moreno}}
+\institute{$^{*}$University of Puget Sound}
+\titlegraphic{\hfill\includegraphics[height=2cm]{img/UofPS_stacked_maroonRGB_PNG.png}}
+
+\begin{document}
+
+\maketitle
+
+% \begin{frame}{Table of contents}
+%   \setbeamertemplate{section in toc}[sections numbered]
+%   \tableofcontents[hideallsubsections]
+% \end{frame}
+
+\input{tex/motivation.tex}
+
+\input{tex/evolutionary_algorithm.tex}
+
+\input{tex/defining_evolvability.tex}
+
+\input{tex/promoting_evolvability.tex}
+
+\input{tex/eann.tex}
+
+\input{tex/conclusion.tex}
+
+\input{tex/appendix.tex}
+
+\input{tex/experiment.tex}
+
+\end{document}

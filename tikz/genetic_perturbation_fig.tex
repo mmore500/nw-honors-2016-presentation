@@ -1,0 +1,35 @@
+\pgfmathsetseed{1}
+\begin{tikzpicture} [x={(-0.2cm,-0.4cm)}, y={(1cm,0cm)}, z={(0cm,1cm)}, scale=1]   
+
+   \begin{scope}[canvas is yx plane at z=0]
+     \draw [black!100] (0,2) grid (7,9);
+     \draw [black!100] (8,0) grid (19,11);
+     
+     % primary phenotype mapping
+     \foreach \x in {2,3,4}
+       \foreach \y in {4,5,6}
+    	  \filldraw[fill=pink!40!white, draw=pink] (\x, \y) rectangle (\x+1,\y+1);
+
+     \filldraw[fill=orange!40!white, draw=orange] (3, 5) rectangle (4,6);
+     \filldraw[fill=orange!40!white, draw=orange] (13, 5) rectangle (14,6);
+
+      
+     \foreach \cx/\cy/\dx/\dy in {2.5/4.5/12.5/8.5,3.5/4.5/15.5/9.5,4.5/4.5/14.5/3.5,2.5/5.5/17.5/5.5,4.5/5.5/11.5/1.5,2.5/6.5/12.5/5.5,2.5/6.5/12.5/5.5,3.5/6.5/12.5/5.5,4.5/6.5/14.5/8.5}
+      	\filldraw[fill=pink!40!white, draw=pink] (\dx-0.5, \dy-0.5) rectangle (\dx+0.5,\dy+0.5);
+        
+      \foreach \x in {8,9,...,18}
+       \foreach \y in {0,1,...,10}
+        \pgfmathparse{0.9*rnd+0.3}
+        \definecolor{MyColor}{rgb}{\pgfmathresult,\pgfmathresult,\pgfmathresult}
+        \fill[fill=MyColor, opacity = 0.3] (\x,\y) rectangle (\x+1,\y+1);
+
+      \foreach \cx/\cy/\dx/\dy in {2.5/4.5/12.5/8.5,3.5/4.5/15.5/9.5,4.5/4.5/14.5/3.5,2.5/5.5/17.5/5.5,4.5/5.5/11.5/1.5,2.5/6.5/12.5/5.5,2.5/6.5/12.5/5.5,3.5/6.5/12.5/5.5,4.5/6.5/14.5/8.5}
+     	\draw [pink!80!black, line width=2pt] (\cx, \cy) to[bend right=90, in looseness=0.1] (\dx, \dy);
+
+       \draw [orange!80!black, line width=2pt] (3.5,5.5) to[bend right=90, in looseness=0.1] (13.5,5.5);
+     
+     \draw [black] (3.5,10)node {\LARGE Genotype Space};
+     \draw [black] (13.5,12)node {\LARGE Phenotype Space};
+
+   \end{scope}
+ \end{tikzpicture}

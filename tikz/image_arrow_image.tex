@@ -1,0 +1,13 @@
+ \begin{tikzpicture}
+    \node (first) {\includegraphics[width=0.25\textwidth]{img/cppn}};
+    \node (second) [right=of first] {\includegraphics[width=0.25\textwidth]{img/walking_fish}};
+    \node (third) [right=of second] {\includegraphics[width=0.25\textwidth]{img/neural_network}};
+
+    \node (a) [right=of first] {};
+    \node (b) [left=of second] {};
+    \node (c) [right=of second] {};
+    \node (d) [left=of third] {};
+
+    \draw [ultra thick,->] (b) to (a);
+    \draw [ultra thick,->] (d) to (c);
+\end{tikzpicture}

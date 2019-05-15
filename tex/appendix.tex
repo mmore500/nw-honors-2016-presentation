@@ -1,0 +1,102 @@
+\appendix
+
+\begin{frame}{Acknowledgements}
+\begin{itemize}
+\item My thesis advisor, Professor Chambers
+\item Professor Smith for serving as a reader for my thesis
+\item Professor Erving for his support as the Honors Program Director
+\item Seattle Pacific University for hosting the Northwest Honors Research Symposium
+\end{itemize}
+\begin{columns}[T,onlytextwidth]
+\column{\textwidth}
+\begin{minipage}[]{0.15\textwidth}
+~
+\end{minipage}%
+\begin{minipage}[]{0.3\textwidth}
+    \begin{centering}
+    \includegraphics[width = \textwidth]{img/SPUTorch_208_LR}
+    \end{centering}
+\end{minipage}%
+\begin{minipage}[]{0.1\textwidth}
+~
+\end{minipage}%
+\begin{minipage}[]{0.3\textwidth}
+	\begin{centering}
+    \includegraphics[width = \textwidth]{img/UofPS_stacked_maroonRGB_PNG}
+    \end{centering}
+\end{minipage}%
+\begin{minipage}[]{0.15\textwidth}
+~
+\end{minipage}%
+\end{columns}
+\end{frame}
+
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+
+  \bibliography{Mendeley}
+  \setbeamertemplate{bibliography item}{\insertbiblabel}
+  %\nocite{*} % Insert publications even if they are not cited in the poster
+  \bibliographystyle{apalike}
+\end{frame}
+
+\begin{frame}{Bio AI}
+\begin{figure}
+  \includegraphics[width=0.6\textwidth]{img/nn_art_styles.png}
+  \captionsetup{singlelinecheck=off,justification=raggedright}
+  \caption{A Neural Algorithm of Artistic Style \cite{Gatys2015AStyle}}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Evolvability as Heritable Variation}
+  \input{figs/individual_vs_population_evolvability.tex}
+\end{frame}
+
+\begin{frame}{Evolvability as Bias towards Useful Variation}
+  \input{figs/exploratory_growth.tex}
+\end{frame}
+
+\begin{frame}{Evolvability as Bias towards Useful Variation}
+  \input{figs/robustness.tex}
+\end{frame}
+
+\begin{frame}{Selection Pressure}
+\begin{figure}
+\resizebox{\textwidth}{!}{%
+	\input{tikz/genetic_perturbation_fig.tex}
+}
+\captionsetup{singlelinecheck=off,justification=raggedright}
+\caption{average performance of local genetic environment \cite{Reisinger2005TowardsEvolvability}}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Bio AI}
+\begin{figure}
+  \includegraphics[width=\textwidth]{img/iterative_places}
+\captionsetup{singlelinecheck=off,justification=raggedright}
+\caption{Google Deep Dream \cite{Mordvintsev2015Inceptionism:Networks}}
+\end{figure}
+\end{frame}
+
+% \begin{frame}{Measuring Evolvability}
+% \begin{itemize}
+%   \item amount of information able to acquire (different speeds of varying fitness function)\cite{Reisinger2005TowardsEvolvability} 
+%   \item RMS distance in behavioral characterization space (population diversity), ``We approximate an individual’s capacity to generate
+% future phenotypic variation by measuring phenotypic
+% variability among a sample of the individual’s simulated off-
+% spring (which are discarded). Such variability is quantified as
+% the number of unique behaviors; in particular, each offspring
+% is considered sequentially and added to a list of unique behaviors
+% only if its behavior is significantly different from the
+% behaviors of organisms already in the list. Two behaviors are
+% considered different if the distance between them according
+% to a domain-specific behavioral distance metric is above a
+% pre-specified threshold'' \cite{Mengistu2016EvolvabilityIt}
+%   \item ``a measurement of evolvability should characterize the
+% amount of variability that can be accessed in an individual or population's genetic neighborhood; number of distinct phenotypes in a genetic neighborhood around individual; amounts to Monte Carlo sampling of the phenotypic space surrounding an individual \cite{Wilder2015ReconcilingEvolvability}
+%   %\item \cite{Tarapore2015EvolvabilityBenchmarks}
+% \end{itemize}
+% \end{frame}
